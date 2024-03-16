@@ -53,7 +53,8 @@ class RMS :
         footer=Label(self.root,text="RGIT : Student Database Management System\n  Contact us for anyTechnical Issue:98xxxxxxxxx",font=("goudy old style",12),bg="#262626",fg="white").pack(side=BOTTOM ,fill=X)
 
         self.bg_img=Image.open("images/bg.jpg")
-        self.bg_img=self.bg_img.resize((563,375),Image.ANTIALIAS)
+        self.bg_img = self.bg_img.resize((563, 375), Image.BICUBIC)
+        #self.bg_img=self.bg_img.resize((563,375),Image.ANTIALIAS)
         self.bg_img=ImageTk.PhotoImage(self.bg_img)
 
         self.lbl_img=Label(self.root,image=self.bg_img).place(x=400,y=180,width=920,height=350)
